@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family1: "Poppins", sans-serif;
+    --font-family2: "Kanit", sans-serif;;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 16px 32px;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family:var(--font-family1);
+}
+
+nav .title{
+    font-size: 32px;
+}
+
+nav .navbar{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+nav .navbar a{
+    transition: .5s;
+}
+
+.navbar a:hover{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+nav .notif{
+    font-size: 24px;
+}
+
+nav .box_notif{
+    display: flex;
+    position: absolute;
+    font-size: 12px;
+    top: 12vh;
+    right: 18vh;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius: 12px;
+    width: 300px;
+    height: 100px;
+}
+
+.box_notif h1{
+    color:white ;
+    font-family: var(--font-family2);
+}
+
+.box_notif::before{
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background:blue;
+    left: 80%;
+    bottom: 10vh;
+    transform: translateX(50%) rotate(45deg);
+    z-index: -1;
+  }
+
+  nav .kanan{
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger_menu {
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .hamburger_menu a{
+    color: white;
+    transition: .5s;
+  }
+
+  .hamburger_menu a:hover{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    nav{
+        gap: 40vh;
+    }
+
+    nav .box_notif{
+        display: none;
+    }
+    
+    nav .navbar{
+        display: none;
+    }
+
+    .hamburger_menu.active {
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    
+}
