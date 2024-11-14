@@ -119,7 +119,7 @@ nav .box_notif{
     }
 
     nav .box_notif{
-        display: none;
+        right: 4vh; 
     }
     
     nav .navbar{
